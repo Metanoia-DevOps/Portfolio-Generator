@@ -19,9 +19,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -32,7 +32,159 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+#hero-header {
+  background-color: #FEF6E4;
+  height: fit-content;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#hero-segment {
+  background-color: #FEF6E4;
+  height: fit-content;
+  width: 100%;
+  padding: 3rem;
+
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#skills-segment {
+  background-color: #E2DFDC;
+  height: fit-content;
+  width: 100%;
+  padding: 2rem;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#work-segment {
+  background-color: #FEF6E4;
+  height: fit-content;
+  width: 100%;
+  padding: 2rem;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+h1 {
+  font-family: Romie-Regular;
+  font-weight: 10;
+  font-size: 12rem;
+  margin-block-start: 0.1rem;
+    margin-block-end: 0.1rem;
+}
+
+h2 {
+  font-family: Romie-Regular;
+  font-weight: 10;
+  font-size: 4rem;
+  margin-block-start: 0.1rem;
+    margin-block-end: 0.1rem;
+}
+
+h4 {
+  font-family: Roobert-Regular;
+  font-weight: 10;
+  font-size: 2rem;
+  margin-block-start: 0.1rem;
+    margin-block-end: 0.1rem;
+}
+
+h5 {
+  font-family: Roobert-Regular;
+  font-weight: 10;
+  font-size: 1rem;
+  margin-block-start: 0.1rem;
+    margin-block-end: 0.1rem;
+}
+
+#name-logo {
+  font-family: Ninna;
+  font-weight: 10;
+  font-size: 2rem;
+  margin-block-start: 0.1rem;
+    margin-block-end: 0.1rem;
+}
+
+.row-container{
+  display: flex;
+  flex-direction: row;
+}
+
+
+@font-face {
+  font-family: 'Kalice';
+  src: local('Kalice'),
+    url('./fonts/ML-Type/Kalice-TRIAL.otf') format('otf'),
+}
+
+@font-face {
+  font-family: 'Ninna';
+  src: local('Ninna'),
+    url('./fonts/ML-Type/Ninna-TRIAL.otf') format('otf'),
+}
+
+@font-face {
+  font-family: 'Romie-Black';
+  src: local('Romie-Black'),
+    url('./fonts/ML-Type/Romie-Trial-Black.otf') format('otf'),
+}
+
+@font-face {
+  font-family: 'Romie-Bold';
+  src: local('Romie-Bold'),
+    url('./fonts/ML-Type/Romie-Trial-Bold.otf') format('otf'),
+}
+
+@font-face {
+  font-family: 'Romie-Medium';
+  src: local('Romie-Medium'),
+    url('./fonts/ML-Type/Romie-Trial-Medium.otf') format('otf'),
+}
+
+@font-face {
+  font-family: 'Romie-Italic';
+  src: local('Romie-Italic'),
+    url('./fonts/ML-Type/RomieTrial-Italic.otf') format('otf'),
+}
+
+@font-face {
+  font-family: 'Romie-Regular';
+  src: local('Romie-Italic'),
+    url('./fonts/ML-Type/RomieTrial-Regular.otf') format('otf'),
+}
+
+@font-face {
+  font-family: 'Roobert-Regular';
+  src: url('./fonts/Roobert-Font/Roobert-Regular/Roobert-Regular.ttf')
 }

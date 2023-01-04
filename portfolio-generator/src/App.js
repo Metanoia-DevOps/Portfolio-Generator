@@ -3,17 +3,35 @@ import * as React from 'react';
 import Button from '@mui/material-next/Button';
 import 'boxicons/css/boxicons.min.css';
 import { Box, Tab, Tabs } from '@mui/material';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Unity, useUnityContext } from "react-unity-webgl";
 
 
 
 function App() {
+  const { unityProvider, UNSAFE__detachAndUnloadImmediate: detachAndUnloadImmediate } = useUnityContext({
+    loaderUrl: "./unity/webgl-test.loader.js",
+    dataUrl: "./unity/webgl-test.data",
+    frameworkUrl: "./unity/webgl-test.framework.js",
+    codeUrl: "./unity/webgl-test.wasm",
+  });
 
   const [tabIndex, setTabIndex] = useState(0);
 
   const handleTabChange = (event, newTabIndex) => {
+    detachAndUnloadImmediate().catch((reason) => {
+      console.log(reason);
+    });
     setTabIndex(newTabIndex);
   };
+
+  useEffect(() => {
+    return () => {
+      detachAndUnloadImmediate().catch((reason) => {
+        console.log(reason);
+      });
+    };
+  }, [detachAndUnloadImmediate]);
 
   return (
     <div className="App">
@@ -44,7 +62,7 @@ function App() {
           <Box sx={{ padding: 2 }}>
             {tabIndex === 0 && (
               <Box>
-                <h2>The first tab</h2>
+                <Unity style={{width: '100%'}} unityProvider={unityProvider}/>
               </Box>
             )}
             {tabIndex === 1 && (

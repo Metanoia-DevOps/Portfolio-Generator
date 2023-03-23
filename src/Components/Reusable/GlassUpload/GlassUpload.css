@@ -1,0 +1,40 @@
+.glass-upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f3f7;
+  }
+  
+  .glass-upload {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    background-size: cover;
+    overflow: hidden;
+  }
+  
+  .glass-upload input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  
+  .glass-upload:hover .glass-preview {
+    filter: blur(3px);
+  }
+  
+  .glass-upload:active {
+    transform: scale(0.95);
+  }

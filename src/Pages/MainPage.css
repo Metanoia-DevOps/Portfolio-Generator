@@ -173,46 +173,46 @@ h6 {
 @font-face {
   font-family: 'Kalice';
   src: local('Kalice'),
-    url('./fonts/ML-Type/Kalice-TRIAL.otf') format('otf'),
+    url('fonts/ML-Type/Kalice-TRIAL.otf') format('otf'),
 }
 
 @font-face {
   font-family: 'Ninna';
   src: local('Ninna'),
-    url('./fonts/ML-Type/Ninna-TRIAL.otf') format('otf'),
+    url('fonts/ML-Type/Ninna-TRIAL.otf') format('otf'),
 }
 
 @font-face {
   font-family: 'Romie-Black';
   src: local('Romie-Black'),
-    url('./fonts/ML-Type/Romie-Trial-Black.otf') format('otf'),
+    url('fonts/ML-Type/Romie-Trial-Black.otf') format('otf'),
 }
 
 @font-face {
   font-family: 'Romie-Bold';
   src: local('Romie-Bold'),
-    url('./fonts/ML-Type/Romie-Trial-Bold.otf') format('otf'),
+    url('fonts/ML-Type/Romie-Trial-Bold.otf') format('otf'),
 }
 
 @font-face {
   font-family: 'Romie-Medium';
   src: local('Romie-Medium'),
-    url('./fonts/ML-Type/Romie-Trial-Medium.otf') format('otf'),
+    url('fonts/ML-Type/Romie-Trial-Medium.otf') format('otf'),
 }
 
 @font-face {
   font-family: 'Romie-Italic';
   src: local('Romie-Italic'),
-    url('./fonts/ML-Type/RomieTrial-Italic.otf') format('otf'),
+    url('fonts/ML-Type/RomieTrial-Italic.otf') format('otf'),
 }
 
 @font-face {
   font-family: 'Romie-Regular';
   src: local('Romie-Italic'),
-    url('./fonts/ML-Type/RomieTrial-Regular.otf') format('otf'),
+    url('fonts/ML-Type/RomieTrial-Regular.otf') format('otf'),
 }
 
 @font-face {
   font-family: 'Roobert-Regular';
-  src: url('./fonts/Roobert-Font/Roobert-Regular/Roobert-Regular.ttf')
+  src: url('fonts/Roobert-Font/Roobert-Regular/Roobert-Regular.ttf')
 }

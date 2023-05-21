@@ -11,10 +11,14 @@ function SkillsSegment() {
     unityProvider,
     UNSAFE__detachAndUnloadImmediate: detachAndUnloadImmediate,
   } = useUnityContext({
-    loaderUrl: "./unity/webgl-test.loader.js",
-    dataUrl: "./unity/webgl-test.data",
-    frameworkUrl: "./unity/webgl-test.framework.js",
-    codeUrl: "./unity/webgl-test.wasm",
+    // loaderUrl: "./unity/webgl-test.loader.js",
+    // dataUrl: "./unity/webgl-test.data",
+    // frameworkUrl: "./unity/webgl-test.framework.js",
+    // codeUrl: "./unity/webgl-test.wasm",
+    loaderUrl: "./Build/MetanoiaWebgl.loader.js",
+    dataUrl: "./Build/MetanoiaWebgl.data",
+    frameworkUrl: "./Build/MetanoiaWebgl.framework.js",
+    codeUrl: "./Build/MetanoiaWebgl.wasm",
   });
 
   const [tabIndex, setTabIndex] = useState(0);
@@ -47,18 +51,14 @@ function SkillsSegment() {
         }}
       >
         <Tabs value={tabIndex} onChange={handleTabChange}>
-          <Tab label={<h3 className="tab-label">AR/VR</h3>} />
           <Tab label={<h3 className="tab-label">Web Dev</h3>} />
+          <Tab label={<h3 className="tab-label">AR/VR</h3>} />
+
           <Tab label={<h3 className="tab-label">UI/UX</h3>} />
         </Tabs>
       </Box>
       <Box sx={{ padding: 2 }}>
         {tabIndex === 0 && (
-          <Box>
-            <Unity style={{ width: "100%" }} unityProvider={unityProvider} />
-          </Box>
-        )}
-        {tabIndex === 1 && (
           <Box>
             <h4>HTML CSS REACTJS ANGULARJS THREEJS</h4>
             <h5>Perserverant Resilient Productive</h5>
@@ -72,6 +72,11 @@ function SkillsSegment() {
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum."
             </h5>
+          </Box>
+        )}
+        {tabIndex === 1 && (
+          <Box>
+            <Unity style={{ width: "100%" }} unityProvider={unityProvider} />
           </Box>
         )}
         {tabIndex === 2 && (

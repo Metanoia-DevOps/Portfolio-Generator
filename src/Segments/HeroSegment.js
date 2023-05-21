@@ -7,21 +7,19 @@ import { useState, useEffect } from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
 import JobComponent from "../Components/JobComponent";
 
-function HeroSegment() {
+function HeroSegment({ Name, HeroText, HeroTagline }) {
   return (
     <div id="hero-segment">
       <div id="hero-header">
         <i className="bx bxl-instagram"></i>
-        <h4 id="name-logo">Ricky</h4>
+        <h4 id="name-logo">{Name}</h4>
         <div className="row-container">
           <h5>MENU</h5>
           <i className="bx bx-menu"></i>
         </div>
       </div>
-      <h1>Craftmanship</h1>
-      <h4 style={{ paddingBlock: "2rem" }}>
-        The blend between creativity and technology
-      </h4>
+      <h1>{HeroText}</h1>
+      <h4 style={{ paddingBlock: "2rem" }}>{HeroTagline}</h4>
       <Button
         variant="contained"
         color="#FFFFFF"

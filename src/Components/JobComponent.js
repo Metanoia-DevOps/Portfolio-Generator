@@ -9,10 +9,13 @@ import { Unity, useUnityContext } from "react-unity-webgl";
 function JobComponent({ JobTitle, Company, Period, Duration, Desc }) {
   return (
     <div style={styles.background}>
+      {/* <i className="bx bxs-user" style={styles.avatar}></i> */}
       <h3 style={styles.textContent}>{JobTitle}</h3>
       <h5 style={styles.textContent}>{Company}</h5>
+      <h6 style={styles.textContent}>
+        {Period} | {Duration}
+      </h6>
       <body style={styles.textContent}>{Desc}</body>
-      <i className="bx bxs-user" style={styles.avatar}></i>
     </div>
   );
 }

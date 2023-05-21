@@ -10,44 +10,77 @@ import WorksSegment from "Segments/WorksSegment";
 import ProjectsSegment from "Segments/ProjectsSegment";
 import HeroSegment from "Segments/HeroSegment";
 import { useLocation } from "react-router";
+import db from "Components/firebase";
 
 function MainPage() {
-  const location = useLocation();
+  // const location = useLocation();
 
-  const {
-    unityProvider,
-    UNSAFE__detachAndUnloadImmediate: detachAndUnloadImmediate,
-  } = useUnityContext({
-    loaderUrl: "./unity/webgl-test.loader.js",
-    dataUrl: "./unity/webgl-test.data",
-    frameworkUrl: "./unity/webgl-test.framework.js",
-    codeUrl: "./unity/webgl-test.wasm",
-  });
+  // const {
+  //   unityProvider,
+  //   UNSAFE__detachAndUnloadImmediate: detachAndUnloadImmediate,
+  // } = useUnityContext({
+  //   loaderUrl: "./unity/webgl-test.loader.js",
+  //   dataUrl: "./unity/webgl-test.data",
+  //   frameworkUrl: "./unity/webgl-test.framework.js",
+  //   codeUrl: "./unity/webgl-test.wasm",
+  // });
 
-  const [tabIndex, setTabIndex] = useState(0);
+  // const [tabIndex, setTabIndex] = useState(0);
 
-  const handleTabChange = (event, newTabIndex) => {
-    detachAndUnloadImmediate().catch((reason) => {
-      console.log(reason);
-    });
-    setTabIndex(newTabIndex);
+  // const handleTabChange = (event, newTabIndex) => {
+  //   detachAndUnloadImmediate().catch((reason) => {
+  //     console.log(reason);
+  //   });
+  //   setTabIndex(newTabIndex);
+  // };
+
+  // useEffect(() => {
+  //   return () => {
+  //     detachAndUnloadImmediate().catch((reason) => {
+  //       console.log(reason);
+  //     });
+  //   };
+  // }, [detachAndUnloadImmediate]);
+
+  const [portfolioData, setPortfolioData] = useState();
+
+  const getData = async () => {
+    const docData = await db
+      .collection("user preference")
+      .doc("portfolio ricky data")
+      .get()
+      .then((data) => {
+        setPortfolioData(data.data());
+        // console.log(data.data());
+      })
+      .catch((error) => {
+        console.error("Error retrieving document: ", error);
+      });
   };
 
   useEffect(() => {
-    return () => {
-      detachAndUnloadImmediate().catch((reason) => {
-        console.log(reason);
-      });
-    };
-  }, [detachAndUnloadImmediate]);
+    getData();
+  }, []);
 
   return (
     <div className="App">
       <header className="App-header">
-        <HeroSegment></HeroSegment>
-        <SkillsSegment></SkillsSegment>
-        <WorksSegment workHistory={location.state.work}></WorksSegment>
-        <ProjectsSegment projects={location.state.project}></ProjectsSegment>
+        {portfolioData ? (
+          <>
+            <HeroSegment
+              Name={portfolioData?.FirstName}
+              HeroText={portfolioData?.HeroText}
+              HeroTagline={portfolioData.HeroTagline}
+            ></HeroSegment>
+            <SkillsSegment></SkillsSegment>
+            <WorksSegment workHistory={portfolioData?.work}></WorksSegment>
+            <ProjectsSegment
+              projects={portfolioData?.project}
+            ></ProjectsSegment>
+          </>
+        ) : (
+          <></>
+        )}
       </header>
     </div>
   );

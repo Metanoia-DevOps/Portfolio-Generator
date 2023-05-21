@@ -6,14 +6,14 @@ const RoutePaths = [
     type: "route",
     name: "Main Page",
     key: "Main",
-    route: "/",
+    route: "/Portfolio-Generator/",
     component: <MainPage />,
   },
   {
     type: "route",
     name: "Setup Page",
     key: "Setup",
-    route: "/Setup",
+    route: "/Portfolio-Generator/Setup",
     component: <SetupPage />,
   },
 ];

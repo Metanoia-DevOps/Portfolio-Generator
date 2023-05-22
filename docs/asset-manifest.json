@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "http://metanoia-devops.github.io/Portfolio-Generator/static/css/main.1011d72d.css",
+    "main.js": "http://metanoia-devops.github.io/Portfolio-Generator/static/js/main.035dce42.js",
+    "static/js/787.cc27a473.chunk.js": "http://metanoia-devops.github.io/Portfolio-Generator/static/js/787.cc27a473.chunk.js",
+    "static/media/boxicons.svg": "http://metanoia-devops.github.io/Portfolio-Generator/static/media/boxicons.9e2b21b135bc7d4c803f.svg",
+    "static/media/boxicons.eot": "http://metanoia-devops.github.io/Portfolio-Generator/static/media/boxicons.65a8ce52fc5427e8f94d.eot",
+    "static/media/boxicons.woff": "http://metanoia-devops.github.io/Portfolio-Generator/static/media/boxicons.d12afc36557395143e4b.woff",
+    "static/media/boxicons.ttf": "http://metanoia-devops.github.io/Portfolio-Generator/static/media/boxicons.db9ddb1898dbd76badca.ttf",
+    "static/media/RomieTrial-Italic.otf": "http://metanoia-devops.github.io/Portfolio-Generator/static/media/RomieTrial-Italic.d0e9ff3cfdf0391951dd.otf",
+    "static/media/boxicons.woff2": "http://metanoia-devops.github.io/Portfolio-Generator/static/media/boxicons.df635aaf04cd75132f62.woff2",
+    "static/media/Roobert-Regular.ttf": "http://metanoia-devops.github.io/Portfolio-Generator/static/media/Roobert-Regular.f767911d84d7dd142987.ttf",
+    "static/media/RomieTrial-Regular.otf": "http://metanoia-devops.github.io/Portfolio-Generator/static/media/RomieTrial-Regular.a254618acff1ed6456d3.otf",
+    "static/media/Romie-Trial-Black.otf": "http://metanoia-devops.github.io/Portfolio-Generator/static/media/Romie-Trial-Black.4788724c472929581aff.otf",
+    "static/media/Romie-Trial-Medium.otf": "http://metanoia-devops.github.io/Portfolio-Generator/static/media/Romie-Trial-Medium.6a574e0cb78ec0d81567.otf",
+    "static/media/Romie-Trial-Bold.otf": "http://metanoia-devops.github.io/Portfolio-Generator/static/media/Romie-Trial-Bold.42157c250bc3fd0b31b3.otf",
+    "static/media/Ninna-TRIAL.otf": "http://metanoia-devops.github.io/Portfolio-Generator/static/media/Ninna-TRIAL.736da96260170df3f61a.otf",
+    "static/media/Kalice-TRIAL.otf": "http://metanoia-devops.github.io/Portfolio-Generator/static/media/Kalice-TRIAL.a68cc6cfb317adb5e635.otf",
+    "index.html": "http://metanoia-devops.github.io/Portfolio-Generator/index.html",
+    "main.1011d72d.css.map": "http://metanoia-devops.github.io/Portfolio-Generator/static/css/main.1011d72d.css.map",
+    "main.035dce42.js.map": "http://metanoia-devops.github.io/Portfolio-Generator/static/js/main.035dce42.js.map",
+    "787.cc27a473.chunk.js.map": "http://metanoia-devops.github.io/Portfolio-Generator/static/js/787.cc27a473.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1011d72d.css",
+    "static/js/main.035dce42.js"
+  ]
+}
